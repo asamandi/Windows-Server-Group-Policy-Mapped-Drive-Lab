@@ -1,0 +1,97 @@
+============================================================
+              LAB 03 | TROUBLESHOOTING NOTES
+============================================================
+
+Problem:
+Mapped drive does not appear for ali.it.
+
+Most Likely Causes:
+GPO is linked to the wrong OU.
+User account is in the wrong OU.
+PC1 DNS is not pointing to DC1.
+Group Policy has not updated.
+User needs to log out and log back in.
+Shared folder path is incorrect.
+
+Fix:
+Verify the GPO is linked to the IT OU.
+Verify ali.it is inside the IT OU.
+Set PC1 DNS to 192.168.10.10.
+Run gpupdate /force.
+Log out and log back in.
+Verify \\DC1\IT is accessible manually.
+
+------------------------------------------------------------
+
+Problem:
+GPO does not appear in gpresult /r.
+
+Most Likely Causes:
+GPO is not linked.
+GPO link is disabled.
+User is not in the linked OU.
+The wrong user is logged in.
+
+Fix:
+Check Group Policy Management.
+Confirm the GPO link is enabled.
+Confirm ali.it is in the IT OU.
+Run gpupdate /force again.
+
+------------------------------------------------------------
+
+Problem:
+Mapped drive appears but access is denied.
+
+Most Likely Causes:
+User does not have permission to \\DC1\IT.
+User is not a member of IT-Group.
+Share or NTFS permissions are missing.
+
+Fix:
+Verify IT-Group membership.
+Verify share permissions.
+Verify NTFS permissions.
+Log out and log back in after group membership changes.
+
+-------------------------------------------------------
+
+fix — Wrong DNS
+
+PC1 must use DC1 as DNS:
+- Preferred DNS server: 192.168.10.10
+
+Check:
+- ipconfig /all
+- nslookup amir.local
+
+-------------------------------------------------------
+
+fix — GPO Linked to Wrong OU
+
+Mapped drive is under:
+- User Configuration
+- So the GPO must be linked to the OU where the user exists.
+
+Correct:
+- IT-Mapped-Drive-Policy linked to IT OU
+- ali.it inside IT OU
+
+Wrong:
+- GPO linked only to Workstations OU
+- That will not apply to the user unless loopback processing is configured.
+
+------------------------------------------------------
+
+fix — User Needs to Log Out
+
+If you changed group membership or GPO settings, do this:
+ 1. Run gpupdate /force
+ 2. Log out
+ 3. Log back in
+
+Then check again:
+- gpresult /r
+- net use
+
+-------------------------------------------------------
