@@ -3,56 +3,56 @@
 ============================================================
 
 Problem:
-Mapped drive does not appear for ali.it.
+- Mapped drive does not appear for ali.it.
 
 Most Likely Causes:
-GPO is linked to the wrong OU.
-User account is in the wrong OU.
-PC1 DNS is not pointing to DC1.
-Group Policy has not updated.
-User needs to log out and log back in.
-Shared folder path is incorrect.
+- GPO is linked to the wrong OU.
+- User account is in the wrong OU.
+- PC1 DNS is not pointing to DC1.
+- Group Policy has not updated.
+- User needs to log out and log back in.
+- Shared folder path is incorrect.
 
 Fix:
-Verify the GPO is linked to the IT OU.
-Verify ali.it is inside the IT OU.
-Set PC1 DNS to 192.168.10.10.
-Run gpupdate /force.
-Log out and log back in.
-Verify \\DC1\IT is accessible manually.
+- Verify the GPO is linked to the IT OU.
+- Verify ali.it is inside the IT OU.
+- Set PC1 DNS to 192.168.10.10.
+- Run gpupdate /force.
+- Log out and log back in.
+- Verify \\DC1\IT is accessible manually.
 
 ------------------------------------------------------------
 
 Problem:
-GPO does not appear in gpresult /r.
+- GPO does not appear in gpresult /r.
 
 Most Likely Causes:
-GPO is not linked.
-GPO link is disabled.
-User is not in the linked OU.
-The wrong user is logged in.
+- GPO is not linked.
+- GPO link is disabled.
+- User is not in the linked OU.
+- The wrong user is logged in.
 
 Fix:
-Check Group Policy Management.
-Confirm the GPO link is enabled.
-Confirm ali.it is in the IT OU.
-Run gpupdate /force again.
+- Check Group Policy Management.
+- Confirm the GPO link is enabled.
+- Confirm ali.it is in the IT OU.
+- Run gpupdate /force again.
 
 ------------------------------------------------------------
 
 Problem:
-Mapped drive appears but access is denied.
+- Mapped drive appears but access is denied.
 
 Most Likely Causes:
-User does not have permission to \\DC1\IT.
-User is not a member of IT-Group.
-Share or NTFS permissions are missing.
+- User does not have permission to \\DC1\IT.
+- User is not a member of IT-Group.
+- Share or NTFS permissions are missing.
 
 Fix:
-Verify IT-Group membership.
-Verify share permissions.
-Verify NTFS permissions.
-Log out and log back in after group membership changes.
+- Verify IT-Group membership.
+- Verify share permissions.
+- Verify NTFS permissions.
+- Log out and log back in after group membership changes.
 
 -------------------------------------------------------
 
