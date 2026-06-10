@@ -3,43 +3,26 @@
 ============================================================
 
 On PC1:
-
-ipconfig /all
-
-ping DC1
-
-nslookup amir.local
-
-whoami
-
-whoami /groups
-
-gpupdate /force
-
-gpresult /r
-
-net use
-
-dir I:
-
-dir \\DC1\IT
+- ipconfig /all
+- ping DC1
+- nslookup amir.local
+- whoami
+- whoami /groups
+- gpupdate /force
+- gpresult /r
+- net use
+- dir I:
+- dir \\DC1\IT
 
 ============================================================
 
 Expected Results:
-
-PC1 uses DNS server 192.168.10.10.
-
-PC1 can ping DC1.
-
-PC1 can resolve amir.local.
-
-User AMIR\ali.it receives IT-Mapped-Drive-Policy.
-
-Mapped drive I: appears.
-
-I: points to \\DC1\IT.
-
-User can access and create files in the mapped drive.
+- PC1 uses DNS server 192.168.10.10.
+- PC1 can ping DC1.
+- PC1 can resolve amir.local.
+- User AMIR\ali.it receives IT-Mapped-Drive-Policy.
+- Mapped drive I: appears.
+- I: points to \\DC1\IT.
+- User can access and create files in the mapped drive.
 
 ============================================================
