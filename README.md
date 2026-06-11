@@ -104,10 +104,10 @@ Fix:
 - Shows the mapped drive policy configuration process.
 
 [005-mapped-drive-policy-created-02.png](https://github.com/asamandi/Windows-Server-Group-Policy-Mapped-Drive-Lab/blob/main/Screenshots/005-mapped-drive-policy-created-02.png)
-- Shows the mapped drive location and drive letter settings.
+- Shows the mapped drive policy configuration process.
 
 [005-mapped-drive-policy-created-03.png](https://github.com/asamandi/Windows-Server-Group-Policy-Mapped-Drive-Lab/blob/main/Screenshots/005-mapped-drive-policy-created-03.png)
-- Shows the completed mapped drive Group Policy Preference configuration.
+- Shows the mapped drive policy configuration process.
 
 [006-control-panel-restriction-01.png](https://github.com/asamandi/Windows-Server-Group-Policy-Mapped-Drive-Lab/blob/main/Screenshots/006-control-panel-restriction-01.png)
 - Shows the Control Panel restriction policy configuration.
