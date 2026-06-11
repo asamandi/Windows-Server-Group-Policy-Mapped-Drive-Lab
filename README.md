@@ -113,7 +113,7 @@ Fix:
 - Shows the Control Panel restriction policy configuration.
 
 [006-control-panel-restriction-02.png](https://github.com/asamandi/Windows-Server-Group-Policy-Mapped-Drive-Lab/blob/main/Screenshots/006-control-panel-restriction-02.png)
-- Shows the Control Panel restriction enabled in the GPO.
+- Shows the Control Panel restriction policy configuration.
 
 [007-gpupdate-success.png](https://github.com/asamandi/Windows-Server-Group-Policy-Mapped-Drive-Lab/blob/main/Screenshots/007-gpupdate-success.png)
 - Shows Group Policy successfully refreshed on PC1 using gpupdate /force.
